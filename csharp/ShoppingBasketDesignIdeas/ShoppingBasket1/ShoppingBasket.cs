@@ -2,18 +2,20 @@ namespace ShoppingBasket1;
 
 public class ShoppingBasket
 {
+    public List<Tuple<BasketItem, int>> Items { get; } = new List<Tuple<BasketItem, int>>();
+
     public void Add(BasketItem item, int quantity)
     {
-        throw new NotImplementedException();
+        Items.Add(new Tuple<BasketItem, int>(item, quantity));
     }
 
     public double GetQuantity(String itemName)
     {
-        throw new NotImplementedException();
+        return 0;
     }
 
     public decimal CalculateTotal()
     {
-        throw new NotImplementedException();
+        return 0.0m;
     }
 }

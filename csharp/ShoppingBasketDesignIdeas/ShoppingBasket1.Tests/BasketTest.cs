@@ -20,6 +20,26 @@ namespace ShoppingBasket1;
 public class BasketTest
 {
     [Test]
+    public void Empty_Basket()
+    {
+        var basket = new ShoppingBasket();
+
+        Assert.That(basket.GetQuantity("A"), Is.EqualTo(0));
+        Assert.That(basket.CalculateTotal(), Is.EqualTo(new decimal(0)).Within(0.01));
+    }
+    
+    // one item "A" - basket contains 1 item "A"
+    [Test]
+    public void Basket_contains_one_item_A()
+    {
+        var basket = new ShoppingBasket();
+        basket.Add(new BasketItem("A", 42.0m), 1); 
+
+        Assert.That(basket.GetQuantity("A"), Is.EqualTo(1));
+        Assert.That(basket.CalculateTotal(), Is.EqualTo(new decimal(42.0)).Within(0.01));
+    }
+    
+    [Test]
     [Ignore("WIP")]
     public void Total_Over_100_Gives_Five_Percent_Discount()
     {
