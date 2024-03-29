@@ -20,7 +20,7 @@ namespace ShoppingBasket1;
 public class BasketTest
 {
     [Test]
-    public void Empty_Basket()
+    public void Empty_Basket_contains_nothing()
     {
         var basket = new ShoppingBasket();
 
