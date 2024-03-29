@@ -11,7 +11,7 @@ public class ShoppingBasket
 
     public double GetQuantity(String itemName)
     {
-        return 0;
+        return Items.Count;
     }
 
     public decimal CalculateTotal()

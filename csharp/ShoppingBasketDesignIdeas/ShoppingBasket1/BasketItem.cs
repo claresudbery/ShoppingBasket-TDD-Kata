@@ -2,8 +2,12 @@ namespace ShoppingBasket1;
 
 public class BasketItem
 {
+    private readonly string _name;
+    private readonly decimal _price;
+
     public BasketItem(string name, decimal price)
     {
-        throw new NotImplementedException();
+        _name = name;
+        _price = price;
     }
 }
