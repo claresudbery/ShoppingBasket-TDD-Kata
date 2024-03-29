@@ -16,6 +16,6 @@ public class ShoppingBasket
 
     public decimal CalculateTotal()
     {
-        return 0.0m;
+        throw new NotImplementedException();
     }
 }

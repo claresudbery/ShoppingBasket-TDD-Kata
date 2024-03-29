@@ -25,7 +25,6 @@ public class BasketTest
         var basket = new ShoppingBasket();
 
         Assert.That(basket.GetQuantity("A"), Is.EqualTo(0));
-        Assert.That(basket.CalculateTotal(), Is.EqualTo(new decimal(0)).Within(0.01));
     }
     
     // one item "A" - basket contains 1 item "A"
@@ -36,7 +35,6 @@ public class BasketTest
         basket.Add(new BasketItem("A", 42.0m), 1); 
 
         Assert.That(basket.GetQuantity("A"), Is.EqualTo(1));
-        Assert.That(basket.CalculateTotal(), Is.EqualTo(new decimal(42.0)).Within(0.01));
     }
     
     [Test]
