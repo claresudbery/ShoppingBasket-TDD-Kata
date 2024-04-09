@@ -27,7 +27,6 @@ public class BasketTest
         Assert.That(basket.GetQuantity("A"), Is.EqualTo(0));
     }
     
-    // one item "A" - basket contains 1 item "A"
     [Test]
     public void Basket_contains_one_item_A()
     {
